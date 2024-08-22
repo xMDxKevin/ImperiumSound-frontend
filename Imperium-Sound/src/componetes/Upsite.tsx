@@ -1,6 +1,6 @@
-import Logo from "./Logo";
-import Navbar from "./Navbar";
-import "./styles/upsite.css";
+import Logo from "../componetes/Logo";
+import Navbar from "../componetes/Navbar";
+import "../styles/upsite.css";
 
 function Upsite() {
   return (

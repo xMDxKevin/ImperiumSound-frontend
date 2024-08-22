@@ -1,6 +1,7 @@
 // Formulario.tsx
 import React, { useState } from "react";
-import "./formulario.css"; // Asegúrate de que esta ruta sea correcta
+import "../styles/formulario.css";
+ // Asegúrate de que esta ruta sea correcta
 
 export function Formulario() {
   const [nombre, setNombre] = useState<string>("");
@@ -14,8 +15,6 @@ export function Formulario() {
 
   return (
     <>
-   
-
       <form className="formulario" onSubmit={manejarSubmit}>
         <h1>Iniciar Sesión</h1>
         <div>
@@ -26,7 +25,7 @@ export function Formulario() {
             type="text"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
-            />
+          />
         </div>
         <div>
           <label htmlFor="contrasena"></label>
@@ -36,11 +35,10 @@ export function Formulario() {
             type="password"
             value={contrasena}
             onChange={(e) => setContrasena(e.target.value)}
-            />
+          />
         </div>
         <button type="submit">Iniciar sesión</button>
       </form>
-           
     </>
   );
 }
