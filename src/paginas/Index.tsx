@@ -13,7 +13,7 @@ function Index() {
     <br />
     <br />
    
-        <p>
+        <p className="mrg-general">
           Bienvenidos a Nuestra Página!
           <br />
           <br />
@@ -25,7 +25,7 @@ function Index() {
       </div>
       <div className="senor" />
       </div>
-      <button>registrate</button>
+      <button className="mrg-general">registrate</button>
       
     </>
   );

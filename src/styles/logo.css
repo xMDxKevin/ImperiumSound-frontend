@@ -1,6 +1,7 @@
 .logo {
   display: flex;
+  font-size: 0.8em;
 }
-h1 {
-  margin-left: 15px;
+.logoIMG {
+  margin-right: 1em;
 }

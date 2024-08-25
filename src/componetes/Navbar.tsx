@@ -1,17 +1,32 @@
 import "../styles/navbar.css";
+import { useNavigate } from "react-router-dom";
 
-interface Props {
+/*interface Props {
   Titulo: string;
   children: String;
 }
+const { Titulo, children } = props;
 
-function Navbar(props: Props) {
-  const { Titulo, children } = props;
+*/
+function Navbar() {
+  const navegar = useNavigate();
+
+  const inicioSesionURL = "/inicio-sesion";
+  const registroURL = "/registro";
 
   return (
     <>
-    <h1></h1>
+      <div className="container">
+        <a className="txt-navbar" onClick={() => navegar(inicioSesionURL)}>
+          Iniciar sesion{" "}
+        </a>
+        <a className="txt-navbar" onClick={() => navegar(registroURL)}>
+          {" "}
+          Registro
+        </a>
+      </div>
     </>
   );
 }
+
 export default Navbar;

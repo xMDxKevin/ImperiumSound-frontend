@@ -23,8 +23,9 @@ const MyIcon: React.FC = () => (
     version="1.0"
     viewBox="2751.4 2487.6 547.2 464.3"
     zoomAndPan="magnify"
-    width="80px"
+    width="70px"
     style={{ fill: "rgb(0, 0, 0)" }}
+    className="logoIMG"
   >
     <defs>
       <linearGradient

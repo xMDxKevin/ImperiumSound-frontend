@@ -2,10 +2,6 @@
   height: auto;
 }
 
-p {
-  margin-left: 15px !important;
-  font-size: 1.4em;
-}
 .senor {
   width: 100%;
   height: 500px;
@@ -15,10 +11,6 @@ p {
   background-repeat: no-repeat;
 }
 
-.container {
-  display: flex;
-}
 
-conteo {
-  font-size: 20em;
-}
+
+
