@@ -7,7 +7,7 @@ function Upsite() {
     <>
       <div className="upsite">
         <Logo />
-        <Navbar Titulos={"Iniciar Sesión"} />
+        <Navbar Titulo={"Iniciar Sesión"} children={"registrate"} />
       </div>
     </>
   );

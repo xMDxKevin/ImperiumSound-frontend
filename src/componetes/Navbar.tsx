@@ -1,13 +1,16 @@
+import "../styles/navbar.css";
+
 interface Props {
-  Titulos: string;
+  Titulo: string;
+  children: String;
 }
 
 function Navbar(props: Props) {
-  const { Titulos } = props;
+  const { Titulo, children } = props;
 
   return (
     <>
-      <a href="#">{Titulos}</a>
+    <h1></h1>
     </>
   );
 }
