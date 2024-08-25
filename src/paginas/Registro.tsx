@@ -1,4 +1,21 @@
+
+import { Registrarse } from "../componetes/registro";
+import Logo from "../componetes/Logo";
+import "../styles/registro.css" 
+
 function Registro() {
-  return <><h1>registro</h1></>;
+  return (
+    <>
+    
+      <div className="upsite">
+        <Logo/>
+      </div>
+    <div className="App">
+        <div className="contenido">
+          <Registrarse />
+        </div>
+      </div>
+    </>
+  );
 }
 export default Registro;

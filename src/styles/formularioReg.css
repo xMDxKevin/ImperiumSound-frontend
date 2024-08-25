@@ -1,0 +1,106 @@
+
+.formulario {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 20px;
+  background:linear-gradient(90deg,#381c6c,#2c1a64);
+  width: 20rem;
+  color: rgb(255, 255, 255);
+  width: 500px;
+}
+
+input[text] .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin: 0px;
+  background:transparent
+}
+#correo{
+  background-color: white;
+  color: black;
+  font-weight: bold ;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 10px;
+  
+}
+#nombre{
+  background-color: white;
+  color: black;
+  font-weight: bold ;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 10px;
+}
+#usuario{
+  background-color: white;
+  color: black;
+  font-weight: bold ;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 10px;
+}
+#contrasena{
+  background-color: white;
+  color: black;
+  font-weight: bold ;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 10px;
+}
+#Ccontrasena{
+  background-color: white;
+  color: black;
+  font-weight: bold ;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 10px;
+}
+
+#a{
+  background-color: #341c68;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.btnReg{
+  color: rgb(0, 0, 0);
+  font-size: bolder;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin-bottom: 20px;
+  border-radius: 300px;
+  background-color: white;
+  width: 150px;
+  height: 35px;
+  font-size: 20px;
+}
+input[type="text"]{
+  all: unset;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0.4em;
+}
+input[type="password"]{
+  all: unset;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border-radius: 0.4em;
+}
