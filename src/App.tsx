@@ -4,10 +4,12 @@ import "./App.css";
 import Index from "./paginas/Index";
 import InicioSesion from "./paginas/InicioSesion";
 import Registro from "./paginas/Registro";
+import Fondo from "./componetes/Fondo/Fondo";
 
 function App() {
   return (
     <>
+    <Fondo/>
       <Router>
         <Routes>
           <Route path="/" element={<Index />} />
