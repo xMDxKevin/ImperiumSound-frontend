@@ -6,3 +6,11 @@
   border-bottom: 4px solid;
   border-color: #402484;
 }
+
+.upsiteInt {
+  margin: 1em 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+  

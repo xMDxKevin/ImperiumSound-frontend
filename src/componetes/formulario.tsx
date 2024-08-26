@@ -1,9 +1,16 @@
 // Formulario.tsx
 import React, { useState } from "react";
 import "../styles/formulario.css";
- // Asegúrate de que esta ruta sea correcta
+import MyGoogle from "./MyGoogle";
+import { useNavigate } from "react-router-dom";
+
+// Asegúrate de que esta ruta sea correcta
 
 export function Formulario() {
+  const navegar = useNavigate();
+  const inicioSesionURL = "/inicio-sesion";
+
+  const registroURL = "/registro";
   const [nombre, setNombre] = useState<string>("");
   const [contrasena, setContrasena] = useState<string>("");
 
@@ -16,11 +23,23 @@ export function Formulario() {
   return (
     <>
       <form className="formulario" onSubmit={manejarSubmit}>
-        <h1>Iniciar Sesión</h1>
+        <div className="flexp">
+          <h1 className="formulario-titulo">Iniciar Sesión</h1>
+          <div className="flex">
+            <p className="formulario-texto-2 txt-f">¿Es tu primera vez?</p>
+            <a
+              className="formulario-texto-2"
+              onClick={() => navegar(registroURL)}
+            >
+              registrate
+            </a>
+          </div>
+        </div>
         <div>
-          <p>Correo*</p>
+          <p className="formulario-texto">Correo*</p>
           <label htmlFor="nombre"></label>
           <input
+            className="inputRqd"
             id="nombre"
             type="text"
             value={nombre}
@@ -29,15 +48,21 @@ export function Formulario() {
         </div>
         <div>
           <label htmlFor="contrasena"></label>
-          <p>Contraseña *</p>
+          <p className="formulario-texto">Contraseña *</p>
           <input
+            className="inputRqd"
             id="contrasena"
             type="password"
             value={contrasena}
             onChange={(e) => setContrasena(e.target.value)}
           />
+          <p className="formulario-texto-2 hover">¿Olvidaste la contraseña ?</p>
         </div>
         <button type="submit">Iniciar sesión</button>
+        <div className="formulario-google">
+          <p className="formulario-texto">¿O conectate con?</p>
+          <MyGoogle />
+        </div>
       </form>
     </>
   );

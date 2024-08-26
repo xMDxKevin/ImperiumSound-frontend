@@ -1,20 +1,17 @@
-
 import { Registrarse } from "../componetes/registro";
 import Logo from "../componetes/Logo";
 import "../styles/registro.css" 
+import UpsiteInt from "../componetes/UpsiteInt";
 
 function Registro() {
   return (
     <>
     
-      <div className="upsite">
-        <Logo/>
-      </div>
-    <div className="App">
-        <div className="contenido">
+     <UpsiteInt/>
+        <div className="body">  
           <Registrarse />
         </div>
-      </div>
+    
     </>
   );
 }

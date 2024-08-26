@@ -1,16 +1,14 @@
 import Upsite from "../componetes/Upsite";
 import { Formulario } from "../componetes/formulario";
-
-
+import UpsiteInt from "../componetes/UpsiteInt";
+import "../styles/inicioSesion.css";
 
 function InicioSesion() {
   return (
     <>
-      <div className="App">
-        <Upsite />
-        <div className="contenido">
-          <Formulario />
-        </div>
+      <UpsiteInt />
+      <div className="body">
+        <Formulario />
       </div>
     </>
   );
