@@ -7,6 +7,8 @@ import Registro from "./paginas/Registro";
 import Fondo from "./componetes/Fondo/Fondo";
 import Servicios from "./paginas/servicios";
 import Nosotros from "./paginas/Nosotros";
+import Objetivos from "./paginas/Objetivos";
+import Feedback from "./paginas/Feedback";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/inicio-sesion" element={<InicioSesion />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/nosotros" element={<Nosotros />} />
+          <Route path="/objetivos" element={<Objetivos />} />
+          <Route path="/feedback" element={<Feedback />} />
         </Routes>
       </Router>
     </>

@@ -5,6 +5,7 @@ function Nosotros() {
   return (
     <>
     <Upsite></Upsite>
+    <div className="tituloObje"><h1>NOSOTROS</h1></div>
     <div className="contenedor1">
         <div className="tarjeta1">
             <h2>Nosotros</h2>
