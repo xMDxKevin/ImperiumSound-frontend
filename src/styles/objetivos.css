@@ -9,7 +9,7 @@
 }
 
 
-.tarjetaa1{
+.tarjeta1{
     background:linear-gradient(90deg,#140c34,#301464); /* Fondo morado oscuro */
     border-radius: 2em;
     padding: 20px;
@@ -19,7 +19,7 @@
     margin-left: 5em;
     padding: 2em;
 }
-.tarjetaa2{
+.tarjeta2{
     background:linear-gradient(90deg,#140c34,#301464);/* Fondo morado oscuro */
     border-radius: 2em;
     padding: 20px;
@@ -29,7 +29,7 @@
     margin-left: 10em;
     padding: 2em;
 }
-.tarjetaa3{
+.tarjeta3{
     background:linear-gradient(90deg,#140c34,#301464); /* Fondo morado oscuro */
     border-radius: 2em;
     padding: 20px;
@@ -41,37 +41,37 @@
     padding: 2em;
 }
 
-.tarjetaa1 h2 {
+.tarjeta1 h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
     text-align: center;
     
 }
 
-.tarjetaa1 p {
+.tarjeta1 p {
     
     font-size: 1.2em;
     line-height: 1.3;
 }
-.tarjetaa2 h2 {
+.tarjeta2 h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
     
 }
 
-.tarjetaa2 p {
+.tarjeta2 p {
     
     font-size: 1.2em;
     line-height: 1.3;
 }
 
-.tarjetaa3 h2 {
+.tarjeta3 h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
     
 }
 
-.tarjetaa3 p {
+.tarjeta3 p {
     
     font-size: 1.2em;
     line-height: 1.3;

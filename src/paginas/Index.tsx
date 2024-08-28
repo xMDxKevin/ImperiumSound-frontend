@@ -1,8 +1,15 @@
 import Upsite from "../componetes/Upsite";
 import "../styles/index.css";
 import Conteo from "../componetes/Conteo";
+import { useNavigate } from "react-router-dom";
+
+
 
 function Index() {
+
+const navegar = useNavigate();
+const registroURL = "/registro";
+
   return (
     <>
       <Upsite />
@@ -22,10 +29,8 @@ function Index() {
           ofrecerte la mejor experiencia posible, brindándote contenido de
           calidad, recursos útiles y el apoyo que necesitas.
         </p>
-        <a href="./registro"><button className="boton-registrarme">
-        <div className="bolita"></div>
-        REGISTRARME
-    </button></a>
+        <a onClick={() => navegar(registroURL)}><button className="boton-registrarme">
+        <div className="bolita"></div>REGISTRARME</button></a>
       </div>
       <div className="senor" />
       </div>
