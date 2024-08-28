@@ -37,7 +37,7 @@ export function Registrarse() {
 </div>
 </div>
         <div id="a">
-          <p className="formulario-texto">Nombre Completo*</p>
+          <p className="formulario-texto">Nombre Completo</p>
           <label htmlFor="nombre"></label>
           <input
             className="inputRqd"
@@ -48,7 +48,7 @@ export function Registrarse() {
           />
         </div>
         <div id="a">
-          <p className="formulario-texto">Correo Electronico*</p>
+          <p className="formulario-texto">Correo Electronico</p>
           <label htmlFor="correo"></label>
           <input
             className="inputRqd"
@@ -59,7 +59,7 @@ export function Registrarse() {
           />
         </div>
         <div id="a">
-          <p className="formulario-texto">Usuario*</p>
+          <p className="formulario-texto">Usuario</p>
           <label htmlFor="usuario"></label>
           <input
             className="inputRqd"
@@ -71,7 +71,7 @@ export function Registrarse() {
         </div>
         <div id="a">
           <label htmlFor="contrasena"></label>
-          <p className="formulario-texto">Contraseña*</p>
+          <p className="formulario-texto">Contraseña</p>
           <input
             className="inputRqd"
             id="contrasena"
@@ -82,7 +82,7 @@ export function Registrarse() {
         </div>
         <div id="a">
           <label htmlFor="Ccontrasena"></label>
-          <p className="formulario-texto">Confirmar Contraseña*</p>
+          <p className="formulario-texto">Confirmar Contraseña</p>
           <input
             className="inputRqd"
             id="Ccontrasena"
@@ -92,9 +92,7 @@ export function Registrarse() {
           />
         </div>
         <div id="a">
-          <button  type="submit">
-            Registrate
-          </button>
+          <button type="submit" className="boton-Registrarte">Registrarse</button>
         </div>
       </form>
     </>

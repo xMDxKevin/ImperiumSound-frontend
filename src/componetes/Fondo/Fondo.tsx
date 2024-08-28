@@ -8,6 +8,7 @@ import {
   Circle5,
   Circle6,
   CircleF,
+  Circle7,
   ContainerFondo,
   ContainerPrincipal,
 } from "./style";
@@ -24,6 +25,7 @@ const Fondo = () => {
         <Circle4 />
         <Circle5 />
         <Circle6 />
+        <Circle7/>
       </ContainerFondo>
     </ContainerPrincipal>
   );

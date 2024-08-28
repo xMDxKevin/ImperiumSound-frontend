@@ -59,3 +59,21 @@ input[text] .container {
 .txt-f {
   margin: 0 0.3em 0em 0em;
 }
+.boton-Registrarte1 {
+  background: linear-gradient(90deg, #1a093e, #4b238c); /* Gradiente similar al de la imagen */
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 2em;
+  padding: 0.8em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition:  0.3s ease;
+  box-shadow: 0px 2px 8px #ffffff5e;
+}
+
+.boton-Registrarte1:hover {
+  background: linear-gradient(90deg, #4b238c, #1a093e); /* Cambia el gradiente al hacer hover */
+}

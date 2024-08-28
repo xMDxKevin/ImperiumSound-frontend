@@ -31,12 +31,12 @@ export function Formulario() {
               className="formulario-texto-2"
               onClick={() => navegar(registroURL)}
             >
-              registrate
+              Registrate
             </a>
           </div>
         </div>
         <div>
-          <p className="formulario-texto">Correo*</p>
+          <p className="formulario-texto">Correo</p>
           <label htmlFor="nombre"></label>
           <input
             className="inputRqd"
@@ -48,7 +48,7 @@ export function Formulario() {
         </div>
         <div>
           <label htmlFor="contrasena"></label>
-          <p className="formulario-texto">Contraseña *</p>
+          <p className="formulario-texto">Contraseña</p>
           <input
             className="inputRqd"
             id="contrasena"
@@ -58,9 +58,12 @@ export function Formulario() {
           />
           <p className="formulario-texto-2 hover">¿Olvidaste la contraseña ?</p>
         </div>
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" className="boton-Registrarte1">Iniciar Sesion</button>
         <div className="formulario-google">
-          <p className="formulario-texto">¿O conectate con?</p>
+          <p className="formulario-texto">¿O conectate con?
+            <br />
+           <br />
+          </p>
           <MyGoogle />
         </div>
       </form>

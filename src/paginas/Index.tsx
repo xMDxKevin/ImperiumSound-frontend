@@ -8,8 +8,8 @@ function Index() {
       <Upsite />
       <div className="container">
 
-      <div>
-        <Conteo />
+      <div className="txtPrincipal">
+        <div className="conteo"><Conteo/></div>
     <br />
     <br />
    
@@ -22,10 +22,14 @@ function Index() {
           ofrecerte la mejor experiencia posible, brindándote contenido de
           calidad, recursos útiles y el apoyo que necesitas.
         </p>
+        <a href="./registro"><button className="boton-registrarme">
+        <div className="bolita"></div>
+        REGISTRARME
+    </button></a>
       </div>
       <div className="senor" />
       </div>
-      <button className="mrg-general">registrate</button>
+      
       
     </>
   );

@@ -5,6 +5,8 @@ import Index from "./paginas/Index";
 import InicioSesion from "./paginas/InicioSesion";
 import Registro from "./paginas/Registro";
 import Fondo from "./componetes/Fondo/Fondo";
+import Servicios from "./paginas/servicios";
+import Nosotros from "./paginas/Nosotros";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/inicio-sesion" element={<InicioSesion />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
       </Router>
     </>
