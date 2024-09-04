@@ -9,8 +9,7 @@ import Servicios from "./paginas/servicios";
 import Nosotros from "./paginas/Nosotros";
 import Objetivos from "./paginas/Objetivos";
 import Feedback from "./paginas/Feedback";
-
-import Caracteris from "./paginas/Caracteristicas";
+import Caracteristicas from "./paginas/Caracteristicas";
 
 function App() {
   return (
@@ -25,6 +24,7 @@ function App() {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/objetivos" element={<Objetivos />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/caracteristicas" element={<Caracteristicas/>} />
         </Routes>
       </Router>
     </>

@@ -13,6 +13,7 @@
 }
 .container {
   display: flex;
+  align-items: center;
 }
 
 .mrg-general {

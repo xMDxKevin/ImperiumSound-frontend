@@ -1,11 +1,15 @@
-import UpsiteInt from "../componetes/UpsiteInt"
-function Caracteris(){
-    return
-    (
+import { UpsiteLog } from "../componetes/UpsiteLog";
+import "../styles/caracteristicas.css"
+function Caracteristicas(){
+    return(
         <>
-      <UpsiteInt></UpsiteInt>
-      <h1>hola</h1>
-      </>
+        <UpsiteLog></UpsiteLog>
+        <div className="container" id="contenedorCarac">
+            <div className="tituloCarac"><h1>CARACTERISTICAS</h1></div>
+
+        </div>
+        </>
     )
+    
 }
-export default Caracteris;
+export default Caracteristicas;
