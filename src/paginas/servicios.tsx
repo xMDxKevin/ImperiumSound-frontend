@@ -8,9 +8,7 @@ function Servicios() {
       <UpsiteLog/>
         
       <div className="body">
-        <div>
-
-
+      <div>
       <div className="titulo1">
       <h1>SERVICIOS</h1>
       </div>

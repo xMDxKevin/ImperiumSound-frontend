@@ -1,10 +1,10 @@
 
-import "../styles/nosotros.css"
-import Upsite from "../componetes/Upsite";
+import"../styles/nosotros.css"
+import { UpsiteLog } from "../componetes/UpsiteLog";
 function Nosotros() {
   return (
     <>
-    <Upsite></Upsite>
+    <UpsiteLog></UpsiteLog>
     <div className="tituloObje"><h1>NOSOTROS</h1></div>
     <div className="contenedor1">
         <div className="tarjeta1">

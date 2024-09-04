@@ -9,7 +9,7 @@ export const ContainerPrincipal = styled.div`
 `;
 
 export const ContainerFondo = styled.div`
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
 `;

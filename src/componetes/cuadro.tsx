@@ -12,21 +12,30 @@ function Cuadro() {
         "En lugares públicos, el dispositivo puede alertar a los administradores cuando los niveles de ruido excedan ciertos límites, lo que les permitirá tomar medidas para mantener un ambiente tranquilo y agradable.",
     },
     {
-      title: "Control de ruido",
+      title: "Monitoreo de ruido",
       description:
-        "En lugares públicos, el dispositivo puede alertar a los administradores cuando los niveles de ruido excedan ciertos límites, lo que les permitirá tomar medidas para mantener un ambiente tranquilo y agradable.",
+        "Proporciona información en tiempo real sobre los niveles de ruido en áreas urbanas, lo que ayuda a las autoridades locales a tomar medidas para reducir la contaminación acústica",
     },
     {
-      title: "Control de ruido",
+      title: "Accesibilidad",
       description:
-        "En lugares públicos, el dispositivo puede alertar a los administradores cuando los niveles de ruido excedan ciertos límites, lo que les permitirá tomar medidas para mantener un ambiente tranquilo y agradable.",
+        "Disponible en cualquier dispositivo con acceso a internet, sin necesidad de descargas",
     },
     {
-      title: "Control de ruido",
+      title: "Recomendaciones",
       description:
-        "En lugares públicos, el dispositivo puede alertar a los administradores cuando los niveles de ruido excedan ciertos límites, lo que les permitirá tomar medidas para mantener un ambiente tranquilo y agradable.",
+        "Recibe consejos prácticos para reducir el ruido mejorar tu bienestar.",
     },
-
+    {
+      title: "Soporte Dedicado",
+      description:
+        "Nuestro equipo de soporte está siempre disponible para ayudarte con cualquier duda o problema",
+    },
+    {
+      title: "Precisión",
+      description:
+        "Utilizamos tecnología avanzada para ofrecerte mediciones exactas del nivel de ruido",
+    }
     // Añade más cuadros según sea necesario
   ];
 

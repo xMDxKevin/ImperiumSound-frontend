@@ -10,6 +10,8 @@ import Nosotros from "./paginas/Nosotros";
 import Objetivos from "./paginas/Objetivos";
 import Feedback from "./paginas/Feedback";
 
+import Caracteris from "./paginas/Caracteristicas";
+
 function App() {
   return (
     <>

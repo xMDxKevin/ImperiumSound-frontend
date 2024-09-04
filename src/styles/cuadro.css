@@ -3,21 +3,20 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    max-width: 69em;
+    max-width: 50em;
     margin: auto;
     
 }
 
 .recuadro {
    justify-content: center;
-   
     display: flex;
     align-items: center;
     background:linear-gradient(90deg,#140c34,#381c74);
     color: #E6D9FF;
     border-radius: 3em;
     padding:1em;
-    max-width: 17em;
+    max-width: 13em;
     height: 18em;
     min-width: calc(100% - 2em); /* Ajusta el ancho del cuadro según el espacio de la separación */
     box-sizing: border-box;
@@ -111,7 +110,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        max-width: 69em;
+        max-width: 90em;
         margin: auto;
         
     }
@@ -125,7 +124,7 @@
         color: #E6D9FF;
         border-radius: 3em;
         padding:1em;
-        max-width: 17em;
+        max-width: 14em;
         height: 18em;
         min-width: calc(100% - 2em); /* Ajusta el ancho del cuadro según el espacio de la separación */
         box-sizing: border-box;
