@@ -6,7 +6,11 @@
     margin-top: 7em;
     max-height: 23em;
   }
-
+  .imagen-reducida {
+    width:10em; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* Mantiene la relación de aspecto */
+    
+  }
   .tarjeta1 {
     background: linear-gradient(
       90deg,
@@ -83,10 +87,10 @@
   .icono1 {
     width: 10em;
     height: 10em;
-    border: solid 0.4em;
+    border: solid 0.2em #ffffff7a ;
     background: linear-gradient(
-      90deg,
-      #140c34,
+      120deg,
+    #0f0929,
       #301464
     ); /* Fondo del círculo del ícono */
     border-radius: 50%;
@@ -98,6 +102,7 @@
 
   .icono img {
     width: 50%;
+    
   }
   .tituloObje{
     text-align: center;
@@ -193,7 +198,7 @@
   .icono1 {
     width: 14em;
     height: 14em;
-    border: solid 0.4em;
+    border: solid 0.4em #ffffff7a ;
     background: linear-gradient(
       90deg,
       #140c34,

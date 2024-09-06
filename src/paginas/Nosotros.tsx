@@ -1,6 +1,9 @@
 
 import"../styles/nosotros.css"
 import { UpsiteLog } from "../componetes/UpsiteLog";
+import NosotrosLog from "../componetes/Nosotros1";
+import NosotrosLog2 from "../componetes/Nosotros2";
+import NosotrosLog3 from "../componetes/Nosotros3";
 function Nosotros() {
   return (
     <>
@@ -12,7 +15,7 @@ function Nosotros() {
             <p>En Imperium Sound nos dedicamos a ayudarte a entender y controlar el ruido en tu entorno. Creemos que un ambiente acústico saludable es fundamental para el bienestar y la productividad.</p>
             <div className="icono1">
                
-                <img src="tu-icono1.png" alt="Icono"/>
+                <NosotrosLog></NosotrosLog>
             </div>
         </div>
 
@@ -21,7 +24,7 @@ function Nosotros() {
             <p>Nos comprometemos a proporcionar una herramienta fiable y precisa para mejorar tu calidad de vida. Creemos que un entorno más tranquilo contribuye a una mejor salud mental y física.</p>
             <div className="icono1">
                 
-                <img src="tu-icono2.png" alt="Icono"/>
+                 <NosotrosLog2></NosotrosLog2>
             </div>
         </div>
 
@@ -30,7 +33,7 @@ function Nosotros() {
             <p>Ofrecemos una herramienta en línea fácil de usar que mide el nivel de ruido en cualquier lugar. Con solo unos clics, puedes obtener datos precisos sobre la intensidad del sonido y recibir recomendaciones para mejorar tu espacio acústico.</p>
             <div className="icono1">
             
-                <img src="tu-icono3.png" alt="Icono"/>
+                <NosotrosLog3></NosotrosLog3>
             </div>
         </div>
     </div>

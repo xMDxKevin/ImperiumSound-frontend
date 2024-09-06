@@ -8,7 +8,13 @@
   max-height: 25em;
 }
 
-
+.imagen-reducida1{
+  width: 7em;
+}
+.imagen-reducida2{
+  width: 7em;
+  margin-left: 0.5em;
+}
 .tarjeta1a{
   background: linear-gradient(
       90deg,
@@ -122,8 +128,13 @@
     margin-top: 7em;
     max-height: 50em;
 }
-
-
+.imagen-reducida1{
+  width: 10em;
+}
+.imagen-reducida2{
+  width: 10em;
+  margin-left: 1em;
+}
 .tarjeta1a{
     background:linear-gradient(90deg,#140c34,#301464); /* Fondo morado oscuro */
     border-radius: 2em;
