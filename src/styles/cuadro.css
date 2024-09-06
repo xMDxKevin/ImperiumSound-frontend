@@ -29,12 +29,14 @@
 }
  
 .icono {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: solid white,2em;
     background-color: #7C4DFF;
-    padding: 3.5em;
+    padding: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .texto {
@@ -91,9 +93,7 @@
 .imagenC {
     
        
-        height: 10em; /* Ajusta la altura */
-        margin-left: 0; /* Ajusta o elimina márgenes según sea necesario */
-        margin-top: 0; /* Ajusta o elimina márgenes según sea necesario */
+       
     
   }     
 
@@ -194,8 +194,6 @@
         border:solid 0.4em #000000;
     }
     .imagenC {
-        width: 20em;
-        height: 10em;
-        margin-left: 2em;
+        
       }     
 }

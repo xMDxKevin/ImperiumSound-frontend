@@ -68,10 +68,10 @@ function Cuadro() {
         >
           {cuadros.map((cuadro, index) => (
             <div className="recuadro" key={index}>
-              <div className="icono">
+              
                 {/* Mostrar la imagen correspondiente a cada cuadro */}
                 <img src={cuadro.image} alt={cuadro.title} className="imagenC" />
-              </div>
+              
               <div className="texto">
                 <h2>{cuadro.title}</h2>
                 <p>{cuadro.description}</p>

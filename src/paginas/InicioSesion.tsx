@@ -6,7 +6,8 @@ import "../styles/inicioSesion.css";
 function InicioSesion() {
   return (
     <>
-      <UpsiteInt />
+      <UpsiteInt></UpsiteInt>
+      
       <div className="body">
         <Formulario />
       </div>
@@ -14,4 +15,4 @@ function InicioSesion() {
   );
 }
 
-export default InicioSesion;
+export default InicioSesion;  
