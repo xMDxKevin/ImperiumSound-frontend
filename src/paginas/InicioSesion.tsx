@@ -7,6 +7,7 @@ function InicioSesion() {
   return (
     <>
       <UpsiteInt />
+     
       <div className="body">
         <Formulario />
       </div>
