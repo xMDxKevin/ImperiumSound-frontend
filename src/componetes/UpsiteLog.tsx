@@ -23,6 +23,7 @@ export function NavbarLog() {
   const objetivos = "/objetivos";
   const sevicios = "/servicios";
   const caracteristicas = "/caracteristicas";
+  const contactanos = "/contactanos";
 
   return (
     <>
@@ -45,6 +46,10 @@ export function NavbarLog() {
         <a className="txt-navbar" onClick={() => navegar(caracteristicas)}>
           {" "}
           Caracteristicas
+        </a>
+        <a className="txt-navbar" onClick={() => navegar(contactanos)}>
+          {" "}
+          Contactanos
         </a>
       </div>
     </>

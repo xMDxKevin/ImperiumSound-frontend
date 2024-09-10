@@ -2,6 +2,7 @@ import Logo from "./Logo";
 import "../styles/upsite.css";
 import { useNavigate } from "react-router-dom";
 
+const inicio = "/";
 function UpsiteInt() {
   const navegar = useNavigate();
 

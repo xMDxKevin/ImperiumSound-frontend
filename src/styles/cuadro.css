@@ -22,6 +22,7 @@
     box-sizing: border-box;
     margin-right: 2em;
 }
+
 .slider {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Para la animación de desplazamiento */
@@ -29,12 +30,14 @@
 }
  
 .icono {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: solid white,2em;
     background-color: #7C4DFF;
-    padding: 3.5em;
+    padding: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .texto {
@@ -69,6 +72,7 @@
     right: -250px; /* Posiciona el botón fuera del recuadro */
 }
 
+
 .boton::before {
     content: '➜'; /* Icono de flecha */
     font-size: 3.5em;
@@ -79,22 +83,17 @@
     background-color: #6A40E6; 
 }
 .boton-derecha {
-    right: -250px;
+    right: -300px;
     border:solid 0.4em #000000;
 }
 
 .boton-izquierda {
-    left: -250px; 
+    left: -300px; 
     transform: scaleX(-1);
     border:solid 0.4em #000000;
 }
 .imagenC {
-    
-       
-        height: 10em; /* Ajusta la altura */
-        margin-left: 0; /* Ajusta o elimina márgenes según sea necesario */
-        margin-top: 0; /* Ajusta o elimina márgenes según sea necesario */
-    
+    width: 16em;
   }     
 
 
@@ -119,8 +118,8 @@
         color: #E6D9FF;
         border-radius: 3em;
         padding:1em;
-        max-width: 14em;
-        height: 18em;
+        max-width: 13em;
+        height: 20em;
         min-width: calc(100% - 2em); /* Ajusta el ancho del cuadro según el espacio de la separación */
         box-sizing: border-box;
         margin-right: 2em;
@@ -130,9 +129,6 @@
         transition: transform 0.5s ease-in-out; /* Para la animación de desplazamiento */
         gap: 1em;
     }
-
-
-    
     .icono {
         width: 100px;
         height: 100px;
@@ -194,8 +190,6 @@
         border:solid 0.4em #000000;
     }
     .imagenC {
-        width: 20em;
-        height: 10em;
-        margin-left: 2em;
+        width: 19em;
       }     
 }
