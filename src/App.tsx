@@ -10,7 +10,7 @@ import Nosotros from "./paginas/Nosotros";
 import Objetivos from "./paginas/Objetivos";
 import Feedback from "./paginas/Feedback";
 import Caracteristicas from "./paginas/Caracteristicas";
-
+import PagInicio from "./paginas/Inicio";
 function App() {
   return (
     <>
@@ -25,6 +25,7 @@ function App() {
           <Route path="/objetivos" element={<Objetivos />} />
           <Route path="/contactanos" element={<Feedback />} />
           <Route path="/caracteristicas" element={<Caracteristicas/>} />
+          <Route path="/inicio" element={<PagInicio/>} />
         </Routes>
       </Router>
     </>

@@ -39,7 +39,7 @@ const ContactCard: React.FC = () => {
 const styles = {
   cardContainer: {
     background:'linear-gradient(135deg,#140c34,#381c74)',
-    borderRadius: '1em',
+    borderRadius: '3em',
     padding: '2.4em',
     maxWidth: '100em',
     color: '#ffffff',

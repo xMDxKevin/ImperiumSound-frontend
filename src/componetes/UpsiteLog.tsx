@@ -1,7 +1,6 @@
 import Logo from "./Logo";
 import { useNavigate } from "react-router-dom";
 import { User } from "./User";
-
 export function UpsiteLog() {
   return (
     <>
@@ -18,7 +17,7 @@ export function UpsiteLog() {
 
 export function NavbarLog() {
   const navegar = useNavigate();
-  const inicio = "/";
+  const inicio = "/inicio";
   const nosotros = "/nosotros";
   const objetivos = "/objetivos";
   const sevicios = "/servicios";
