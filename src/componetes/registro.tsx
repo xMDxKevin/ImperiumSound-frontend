@@ -11,19 +11,37 @@ export function Registrarse() {
   const inicioSesionURL = "/inicio-sesion";
   
   const [nombre, setNombre] = useState<string>("");
-  const [contrasena, setContrasena] = useState<string>("");
-  const [correo, setCorreo] = useState<string>("");
-  const [usuario, setUsuario] = useState<string>("");
-  const [Ccontrasena, setCContrasena] = useState<string>("");
+const [contrasena, setContrasena] = useState<string>("");
+const [correo, setCorreo] = useState<string>("");
+const [usuario, setUsuario] = useState<string>("");
+const [confirmarContrasena, setConfirmarContrasena] = useState<string>("");
 
-  const manejarSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Nombre:", nombre);
-    console.log("Contraseña:", contrasena);
-    console.log("Correo:", correo);
-    console.log("Usuario:", usuario);
-    console.log("Ccontrasena:", Ccontrasena);
-  };
+const manejarSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  
+  if (contrasena === confirmarContrasena) {
+    console.log("La contraseña sí coinciden");
+    const data = { userName:usuario, nombre: nombre, email: correo, passw: contrasena };
+     
+    fetch('http://192.168.137.135:3000/register', {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-type": "application/json; charset=UTF-8" }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(json => console.log(json))
+    .catch(error => console.error('Error en la solicitud:', error));
+    
+  } else { 
+    console.log("La contraseña no coincide");
+  }
+};
+
 
   return (
     <>
@@ -87,8 +105,8 @@ export function Registrarse() {
             className="inputRqd"
             id="Ccontrasena"
             type="password"
-            value={Ccontrasena}
-            onChange={(e) => setCContrasena(e.target.value)}
+            value={confirmarContrasena}
+            onChange={(e) => setConfirmarContrasena(e.target.value)}
           />
         </div>
         <div id="a">
