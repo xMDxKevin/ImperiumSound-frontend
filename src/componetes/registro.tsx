@@ -1,7 +1,7 @@
 // Formulario.tsx
 import React, { useState } from "react";
 import "../styles/formularioReg.css";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 // Asegúrate de que esta ruta sea correcta
 
 export function Registrarse() {
@@ -36,10 +36,13 @@ const manejarSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     })
     .then(json => console.log(json))
     .catch(error => console.error('Error en la solicitud:', error));
-    
+    console.log()
+    navegar(inicioSesionURL);
   } else { 
     console.log("La contraseña no coincide");
   }
+   
+  
 };
 
 
