@@ -11,6 +11,7 @@ import Objetivos from "./paginas/Objetivos";
 import Feedback from "./paginas/Feedback";
 import Caracteristicas from "./paginas/Caracteristicas";
 import PagInicio from "./paginas/Inicio";
+import Cuenta from "./paginas/PanelUsuario";
 function App() {
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contactanos" element={<Feedback />} />
           <Route path="/caracteristicas" element={<Caracteristicas/>} />
           <Route path="/inicio" element={<PagInicio/>} />
+          <Route path="/cuenta" element={<Cuenta/>}></Route>
         </Routes>
       </Router>
     </>

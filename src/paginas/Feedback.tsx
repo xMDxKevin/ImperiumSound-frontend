@@ -4,6 +4,7 @@ import ContactCard from "../componetes/cuadrocontac";
 function Feedback(){
    return(<>
    <UpsiteLog></UpsiteLog>
+  
    <div className="form-container">
       <form className="contact-form">
         <input type="text" placeholder="Nombre" className="input-field" />
@@ -15,7 +16,6 @@ function Feedback(){
       <ContactCard></ContactCard>
       </div>
     </div>
-    
    </>) 
 }
 export default Feedback;

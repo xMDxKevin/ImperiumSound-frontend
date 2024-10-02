@@ -21,7 +21,7 @@ export function User() {
           <div className="menu-desplegable">
             <ul>
             <p id='UserBienvenida'>¡Hola!</p>
-              <li>Cuenta</li>
+              <a href=""><li>Cuenta</li></a>
               <li>Foro</li>
               <li>Soporte</li>
               <li>Cerrar Sesion</li>

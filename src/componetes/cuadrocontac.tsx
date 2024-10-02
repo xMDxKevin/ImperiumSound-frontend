@@ -69,6 +69,7 @@ const styles = {
     fontSize: '1.2em',
     margin: 0,
   },
+  
 };
 
 export default ContactCard; 
