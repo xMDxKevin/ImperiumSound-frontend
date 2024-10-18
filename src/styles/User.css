@@ -92,6 +92,30 @@
     font-size: 1em;
     margin-top: -0.5em;
 }
+.ContainerTxtMic{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-0%, -50%);
+
+}
+#txtMicUp{
+    margin-top: 1em;
+}
+#BtnMicP{
+    background-color: #402484;
+    border: 0.2em solid #402484;
+    border-radius: 0.5em;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+#BtnMicP:hover{
+    color: #d98df0;
+    cursor: pointer;
+}
 @media (min-width: 1600px){
 
 .Linea{

@@ -10,8 +10,9 @@ function MicroUP (){
     <UpsiteUser/>
     <div className="ContainerContenidoUser">
         <NavUser/>
-        <div>
-            <h1>Visualizador de Micrófono</h1>
+        <div className="ContainerTxtMic">
+            <h1>Prueba de Micrófono</h1>
+            <p id="txtMicUp">Realiza aqui una prueba para saber si tu microfono esta funcionando correctamente</p>
             <MicrophoneVisualizer></MicrophoneVisualizer>
         </div>
     </div>
