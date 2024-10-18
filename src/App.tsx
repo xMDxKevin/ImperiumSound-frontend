@@ -12,6 +12,10 @@ import Feedback from "./paginas/Feedback";
 import Caracteristicas from "./paginas/Caracteristicas";
 import PagInicio from "./paginas/Inicio";
 import Cuenta from "./paginas/PanelUsuario";
+import MicroUP from "./paginas/MicroUP";
+import SoporteUp from "./paginas/SoporteUP";
+
+
 function App() {
   return (
     <>
@@ -28,6 +32,8 @@ function App() {
           <Route path="/caracteristicas" element={<Caracteristicas/>} />
           <Route path="/inicio" element={<PagInicio/>} />
           <Route path="/cuenta" element={<Cuenta/>}></Route>
+          <Route path="/microConfig" element={<MicroUP/>}></Route>
+          <Route path="/soporte" element={<SoporteUp/>}></Route>
         </Routes>
       </Router>
     </>
