@@ -42,8 +42,7 @@ function BarraUser() {
                                         </div>
                                 </div>
                     </div>
-                    
-        </div>
+                </div> 
         </>
     )
 }
