@@ -1,6 +1,6 @@
-import { UpsiteLog } from "../componetes/UpsiteLog";
+import { UpsiteLog } from "../componetes/Nav-UpsiteComp/UpsiteLog";
 import "../styles/servicios.css";
-import Cuadro from "../componetes/cuadro";
+import Cuadro from "../componetes/ServicesComp/cuadro";
 function Servicios() {
   return (
     <>

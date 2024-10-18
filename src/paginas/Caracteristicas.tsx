@@ -1,6 +1,6 @@
-import { UpsiteLog } from "../componetes/UpsiteLog";
+import { UpsiteLog } from "../componetes/Nav-UpsiteComp/UpsiteLog";
 import "../styles/caracteristicas.css"
-import CuadroCarac from "../componetes/CuadroCaracteristicas";
+import CuadroCarac from "../componetes/CaractComp/CuadroCaracteristicas";
 function Caracteristicas(){
     return(
         <>

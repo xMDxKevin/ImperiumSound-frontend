@@ -1,6 +1,6 @@
 import "../styles/User.css"
-import UpsiteUser from "../componetes/Upsite_User";
-import MicrophoneVisualizer from "../componetes/MicroPrueba";
+import UpsiteUser from "../componetes/Nav-UpsiteComp/Upsite_User";
+import MicrophoneVisualizer from "../componetes/UserComp/MicroPrueba";
 import { useNavigate } from "react-router-dom";
 
 function MicroUP (){

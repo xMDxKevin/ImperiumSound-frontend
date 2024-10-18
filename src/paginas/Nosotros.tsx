@@ -1,9 +1,9 @@
 
 import"../styles/nosotros.css"
-import { UpsiteLog } from "../componetes/UpsiteLog";
-import NosotrosLog from "../componetes/Nosotros1";
-import NosotrosLog2 from "../componetes/Nosotros2";
-import NosotrosLog3 from "../componetes/Nosotros3";
+import { UpsiteLog } from "../componetes/Nav-UpsiteComp/UpsiteLog";
+import NosotrosLog from "../componetes/NosotrosComp/Nosotros1";
+import NosotrosLog2 from "../componetes/NosotrosComp/Nosotros2";
+import NosotrosLog3 from "../componetes/NosotrosComp/Nosotros3";
 function Nosotros() {
   return (
     <>

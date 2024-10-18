@@ -1,6 +1,6 @@
-import { UpsiteLog } from "../componetes/UpsiteLog";
+import { UpsiteLog } from "../componetes/Nav-UpsiteComp/UpsiteLog";
 import "../styles/feedback.css"
-import ContactCard from "../componetes/cuadrocontac";
+import ContactCard from "../componetes/ContactanosComp/cuadrocontac";
 function Feedback(){
    return(<>
    <UpsiteLog></UpsiteLog>

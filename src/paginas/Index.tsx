@@ -1,6 +1,6 @@
-import Upsite from "../componetes/Upsite";
+import Upsite from "../componetes/Nav-UpsiteComp/Upsite";
 import "../styles/index.css";
-import Conteo from "../componetes/Conteo";
+import Conteo from "../componetes/Nav-UpsiteComp/Conteo";
 import { useNavigate } from "react-router-dom";
 
 

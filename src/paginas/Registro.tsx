@@ -1,6 +1,6 @@
-import { Registrarse } from "../componetes/registro";
+import { Registrarse } from "../componetes/Reg-LogComp/registro";
 import "../styles/registro.css" 
-import UpsiteInt from "../componetes/UpsiteInt";
+import UpsiteInt from "../componetes/Nav-UpsiteComp/UpsiteInt";
 
 function Registro() {
   return (

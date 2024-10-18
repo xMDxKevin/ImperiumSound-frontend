@@ -1,6 +1,6 @@
 import "../styles/User.css"
-import UpsiteUser from "../componetes/Upsite_User";
-import BarraUser from "../componetes/BarraUser";
+import UpsiteUser from "../componetes/Nav-UpsiteComp/Upsite_User";
+import BarraUser from "../componetes/UserComp/BarraUser";
 
 function Cuenta(){
 return(

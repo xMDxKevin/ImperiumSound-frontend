@@ -1,9 +1,9 @@
 
 import "../styles/objetivos.css"
-import { UpsiteLog } from "../componetes/UpsiteLog";
-import ObjetivosLog from "../componetes/Objetivos1";
-import ObjetivosLog2 from "../componetes/Objetivos2";
-import ObjetivosLog3 from "../componetes/Objetivos3";
+import { UpsiteLog } from "../componetes/Nav-UpsiteComp/UpsiteLog";
+import ObjetivosLog from "../componetes/ObjetivosComp/Objetivos1";
+import ObjetivosLog2 from "../componetes/ObjetivosComp/Objetivos2";
+import ObjetivosLog3 from "../componetes/ObjetivosComp/Objetivos3";
 function Objetivos() {
   return (
     <>

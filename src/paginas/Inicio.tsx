@@ -1,6 +1,6 @@
 
 import "../styles/inicio.css";
-import { UpsiteLog } from "../componetes/UpsiteLog";
+import { UpsiteLog } from "../componetes/Nav-UpsiteComp/UpsiteLog";
 
 
 function PagInicio() {

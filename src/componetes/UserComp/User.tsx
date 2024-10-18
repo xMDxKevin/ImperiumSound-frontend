@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/panelDesplegable.css'; 
+import '../../styles'; 
 import { useNavigate } from "react-router-dom";
 
 export function User() {
