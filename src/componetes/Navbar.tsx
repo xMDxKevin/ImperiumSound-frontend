@@ -1,13 +1,6 @@
 import "../styles/navbar.css";
 import { useNavigate } from "react-router-dom";
 
-/*interface Props {
-  Titulo: string;
-  children: String;
-}
-const { Titulo, children } = props;
-
-*/
 function Navbar() {
   const navegar = useNavigate();
 

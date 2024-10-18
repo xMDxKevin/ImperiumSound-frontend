@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/panelDesplegable.css'; 
+import { useNavigate } from "react-router-dom";
 
 export function User() {
  
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
+  const navegar = useNavigate();
+  const cuenta = "/cuenta";
  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,7 +23,7 @@ export function User() {
           <div className="menu-desplegable">
             <ul>
             <p id='UserBienvenida'>¡Hola!</p>
-              <a href=""><li>Cuenta</li></a>
+              <a onClick={() => navegar(cuenta)}><li> Cuenta{" "}</li></a>
               <li>Foro</li>
               <li>Soporte</li>
               <li>Cerrar Sesion</li>
