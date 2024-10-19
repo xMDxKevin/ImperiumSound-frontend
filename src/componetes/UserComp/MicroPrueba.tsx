@@ -53,11 +53,11 @@ const AudioRecorder: React.FC = () => {
     return (
         <div>
             <button id='BtnMicP' onClick={isRecording ? stopRecording : startRecording}>
-                {isRecording ? 'Detener Grabación' : 'Iniciar Grabación'}
+                {isRecording ? 'Detener Prueba' : 'Iniciar Prueba'}
             </button>
             {audioURL && (
                 <div>
-                    <button id='BtnMicP' onClick={playAudio}>Reproducir Audio Grabado</button>
+                    <button id='BtnMicP' onClick={playAudio}>Reproducir Audio de la Prueba</button>
                 </div>
             )}
         </div>

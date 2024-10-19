@@ -2,6 +2,7 @@ import "../styles/User.css"
 import UpsiteUser from "../componetes/Nav-UpsiteComp/Upsite_User";
 import MicrophoneVisualizer from "../componetes/UserComp/MicroPrueba";
 import { useNavigate } from "react-router-dom";
+import AudioAnalyzer from "../componetes/UserComp/MicroMedir";
 
 function MicroUP (){
     return(
@@ -14,6 +15,9 @@ function MicroUP (){
             <h1>Prueba de Micrófono</h1>
             <p id="txtMicUp">Realiza aqui una prueba para saber si tu microfono esta funcionando correctamente</p>
             <MicrophoneVisualizer></MicrophoneVisualizer>
+            <br /><br />
+            <AudioAnalyzer></AudioAnalyzer>
+
         </div>
     </div>
   </div>

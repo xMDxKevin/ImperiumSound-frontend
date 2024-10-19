@@ -25,7 +25,6 @@ export function User() {
             <p id='UserBienvenida'>¡Hola!</p>
               <a onClick={() => navegar(cuenta)}><li> Cuenta{" "}</li></a>
               <li>Foro</li>
-              <li>Soporte</li>
               <li>Cerrar Sesion</li>
             </ul>
           </div>
