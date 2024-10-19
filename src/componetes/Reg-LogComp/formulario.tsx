@@ -8,8 +8,6 @@ import { useNavigate } from "react-router-dom";
 
 export function Formulario() {
   const navegar = useNavigate();
-  const inicioSesionURL = "/inicio-sesion";
-
   const registroURL = "/registro";
   const [nombre, setNombre] = useState<string>("");
   const [contrasena, setContrasena] = useState<string>("");

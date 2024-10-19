@@ -1,8 +1,7 @@
-// Formulario.tsx
+
 import React, { useState } from "react";
 import "../../styles/formularioReg.css";
-import { Navigate, useNavigate } from "react-router-dom";
-// Asegúrate de que esta ruta sea correcta
+import { useNavigate } from "react-router-dom";
 
 export function Registrarse() {
 

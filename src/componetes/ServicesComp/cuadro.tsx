@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../styles/cuadro.css";
-
 import imagen1 from "../../images/image1.png"; 
 import imagen2 from "../../images/image2.png";
 import imagen3 from "../../images/image3.png";
 import imagen4 from "../../images/image4.png";
 import imagen5 from "../../images/image5.png";
 import imagen6 from "../../images/image6.png";
+
 function Cuadro() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -69,7 +69,6 @@ function Cuadro() {
           {cuadros.map((cuadro, index) => (
             <div className="recuadro" key={index}>
               
-                {/* Mostrar la imagen correspondiente a cada cuadro */}
                 <img src={cuadro.image} alt={cuadro.title} className="imagenC" />
               
               <div className="texto">
@@ -84,7 +83,5 @@ function Cuadro() {
       </div>
     );
   }
-  <div className="imagen123">
-  imagen4
-  </div>
+ 
   export default Cuadro;

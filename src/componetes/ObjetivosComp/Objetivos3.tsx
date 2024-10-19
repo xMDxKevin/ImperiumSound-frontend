@@ -1,5 +1,5 @@
 import React from 'react';
-import Objetivos3 from "../../  images/objetivos3.png"
+import Objetivos3 from "../../images/objetivos3.png"
 import "../../styles/nosotros.css"
 
 

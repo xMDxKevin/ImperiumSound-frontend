@@ -1,11 +1,8 @@
 function MyGoogle() {
   return <>
-  
   <IconGoogle/>
-  
   </>;
 }
-
 export default MyGoogle;
 
 function IconGoogle() {
