@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/CuadroCarac.css'; 
+import '../../styles/CuadroCarac.css'; 
 
 const CuadroCarac: React.FC = () => {
   return (

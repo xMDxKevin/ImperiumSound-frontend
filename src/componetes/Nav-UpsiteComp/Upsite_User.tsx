@@ -1,6 +1,6 @@
-import Logo from "./NavbarComp/Logo";
-import "../styles/upsite.css";
-import Salir from "../images/LogoSalir.png";
+import Logo from "../Nav-UpsiteComp/Logo";
+import "../../styles/upsite.css";
+import Salir from "../../images/LogoSalir.png";
 import { useNavigate } from "react-router-dom";
 
 function UpsiteUser() {

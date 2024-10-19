@@ -1,4 +1,4 @@
-import "../styles/conteo.css";
+import "../../styles/conteo.css";
 
 function Conteo() {
   let numero = "10.000";

@@ -1,6 +1,6 @@
 // Formulario.tsx
 import React, { useState } from "react";
-import "../styles/formulario.css";
+import "../../styles/formulario.css";
 import MyGoogle from "./MyGoogle";
 import { useNavigate } from "react-router-dom";
 

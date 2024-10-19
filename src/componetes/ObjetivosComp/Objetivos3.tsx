@@ -1,6 +1,6 @@
 import React from 'react';
-import Objetivos3 from "../images/objetivos3.png"
-import "../styles/nosotros.css"
+import Objetivos3 from "../../  images/objetivos3.png"
+import "../../styles/nosotros.css"
 
 
 const ObjetivosLog3: React.FC = () => {

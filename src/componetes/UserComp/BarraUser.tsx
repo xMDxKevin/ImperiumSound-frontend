@@ -1,4 +1,4 @@
-import "../styles/User.css"
+import "../../styles/User.css"
 import { useNavigate } from "react-router-dom";
 
 function BarraUser() {

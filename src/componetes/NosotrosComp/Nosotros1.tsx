@@ -1,6 +1,6 @@
 import React from 'react';
-import Nosotros1 from "../images/nosotros1.png"
-import "../styles/nosotros.css"
+import Nosotros1 from "../../images/nosotros1.png"
+import "../../styles/nosotros.css"
 
 
 const NosotrosLog: React.FC = () => {

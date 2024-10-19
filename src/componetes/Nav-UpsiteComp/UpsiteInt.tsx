@@ -1,5 +1,5 @@
-import Logo from "./NavbarComp/Logo";
-import "../styles/upsite.css";
+import Logo from "./Logo";
+import "../../styles/upsite.css";
 import { useNavigate } from "react-router-dom";
 
 const inicio = "/";

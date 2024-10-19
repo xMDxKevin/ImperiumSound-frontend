@@ -1,6 +1,6 @@
-import Logo from "./NavbarComp/Logo";
+import Logo from "./Logo";
 import { useNavigate } from "react-router-dom";
-import { User } from "./User";
+import { User } from "../UserComp/User";
 export function UpsiteLog() {
   return (
     <>
