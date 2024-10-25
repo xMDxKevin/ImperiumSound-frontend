@@ -13,7 +13,7 @@ import PagInicio from "./paginas/Inicio";
 import Cuenta from "./paginas/PanelUsuario";
 import MicroUP from "./paginas/MicroUP";
 import SoporteUp from "./paginas/SoporteUP";
-
+import Foro from "./paginas/Foro";
 
 function App() {
   return (
@@ -33,6 +33,7 @@ function App() {
           <Route path="/cuenta" element={<Cuenta/>}></Route>
           <Route path="/microConfig" element={<MicroUP/>}></Route>
           <Route path="/soporte" element={<SoporteUp/>}></Route>
+          <Route path="/foro" element={<Foro/>}></Route>
         </Routes>
       </Router>
     </>

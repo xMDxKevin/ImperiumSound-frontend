@@ -7,6 +7,7 @@ export function User() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const navegar = useNavigate();
   const cuenta = "/cuenta";
+  const foro = "/foro"
  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,7 +25,7 @@ export function User() {
             <ul>
             <p id='UserBienvenida'>¡Hola!</p>
               <a onClick={() => navegar(cuenta)}><li> Cuenta{" "}</li></a>
-              <li>Foro</li>
+              <a onClick={() => navegar(foro)}><li> Foro{" "}</li></a>
               <li>Cerrar Sesion</li>
             </ul>
           </div>
