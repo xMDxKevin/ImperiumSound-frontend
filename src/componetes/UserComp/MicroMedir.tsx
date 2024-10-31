@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
-import Select from 'react-select';
+import Select, { SingleValue } from 'react-select';
 
 const AudioAnalyzer: React.FC = () => {
   const [currentDb, setCurrentDb] = useState<number>(0); // Nivel actual de dB
   const [highestDb, setHighestDb] = useState<number>(0);  // Nivel más alto registrado
-  const [location, setLocation] = useState<string | null>(null); // Lugar seleccionado
+  const [location, setLocation] = useState<{ value: string; label: string } | null>(null); // Lugar seleccionado
   const lastSoundTimeRef = useRef<number>(Date.now()); // Último tiempo de detección de sonido
   const [alertMessage, setAlertMessage] = useState<string>("");
   const [isMeasuring, setIsMeasuring] = useState<boolean>(false); // Estado de la medición
@@ -134,10 +134,13 @@ const AudioAnalyzer: React.FC = () => {
     }
   };
 
+  const handleLocationChange = (newValue: SingleValue<{ value: string; label: string }>) => {
+    setLocation(newValue);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (highestDb > 0 && location) {
-      // Aquí puedes guardar los datos, por ejemplo, enviándolos a un servidor
       console.log("Datos guardados:", { highestDb, location });
       alert(`Datos guardados:\nNivel más alto: ${highestDb.toFixed(2)} dB\nLugar: ${location.label}`);
     } else {
@@ -157,7 +160,7 @@ const AudioAnalyzer: React.FC = () => {
       <div style={{ marginTop: '1em' }}>
       <Select 
         options={locations} 
-        onChange={setLocation} 
+        onChange={handleLocationChange} 
         placeholder="Seleccione una Ciudad" 
         styles={{
             control: (provided) => ({
