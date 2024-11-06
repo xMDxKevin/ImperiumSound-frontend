@@ -75,7 +75,7 @@ export function Formulario() {
           </div>
         </div>
         <div>
-          <p className="formulario-texto">Correo</p>
+          <p className="formulario-texto">Usuario</p>
           <label htmlFor="userName"></label>
           <input
             className="inputRqd"
