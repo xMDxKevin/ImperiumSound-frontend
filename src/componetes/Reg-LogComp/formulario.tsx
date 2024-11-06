@@ -48,9 +48,11 @@ export function Formulario() {
 
       if (!response.ok) {
         const errorData = await response.json();
+         await console.log(errorData);
         throw new Error(errorData.error || "Error al Iniciar Sesion");
+        
       }
-
+      await console.log(response);
       navigate("/inicio");
     } catch (error) {
       setError((error as Error).message);
