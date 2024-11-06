@@ -13,7 +13,7 @@ export function Registrarse() {
   const [confirmarContrasena, setConfirmarContrasena] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
-  // Aquí asignamos la URL de la API con un valor predeterminado en caso de no estar definida.
+
   const apiUrl = import.meta.env.VITE_API_URL ?? "https://imperiumsound-backend-production.up.railway.app";
 
   const manejarSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -78,7 +78,7 @@ export function Registrarse() {
           <p className="formulario-texto">Correo Electronico</p>
           <label htmlFor="correo"></label>
           <input
-            className="inputRqd"
+            className="imputRqd"
             id="correo"
             type="email"
             value={correo}

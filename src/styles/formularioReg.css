@@ -8,14 +8,23 @@ p {
   margin: 0px;
   background: transparent;
 }
-.imputRqd {
+.inputRqd {
   background-color: white;
   color: black;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
   padding: 10px;
 }
-
+.imputRqd{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 0.85em;
+  font-family:"Poppins", sans-serif ;
+  border: white solid 1px;
+  border-radius: 0.3em;
+  width: 15em;
+}
 #a {
   background-color:none;
   font-family: "Poppins", sans-serif;
