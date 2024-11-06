@@ -1,154 +1,132 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState } from "react";
 import "../../styles/formularioReg.css";
 import { useNavigate } from "react-router-dom";
 
-interface FormData {
-  userName: string;
-  email: string;
-  nombre: string;
-  passw: string;
-}
-
 export function Registrarse() {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState<FormData>({
-    userName: "",
-    email: "",
-    nombre: "",
-    passw: "",
-  });
+  const navegar = useNavigate();
+  const inicioSesionURL = "/inicio-sesion";
 
-  const [confirmPassw, setConfirmPassw] = useState<string>("");
-  const [error, setError] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
+  const [nombre, setNombre] = useState<string>("");
+  const [contrasena, setContrasena] = useState<string>("");
+  const [correo, setCorreo] = useState<string>("");
+  const [usuario, setUsuario] = useState<string>("");
+  const [confirmarContrasena, setConfirmarContrasena] = useState<string>("");
+  const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
-  };
+  // Aquí asignamos la URL de la API con un valor predeterminado en caso de no estar definida.
+  const apiUrl = import.meta.env.VITE_API_URL ?? "https://imperiumsound-backend-production.up.railway.app";
 
-  const handleConfirmPasswChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setConfirmPassw(e.target.value);
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const manejarSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Validación de todos los campos
-    if (Object.values(formData).some((field) => field === "")) {
-      setError("Please fill in all fields.");
+    if (contrasena !== confirmarContrasena) {
+      console.log("La contraseña no coincide");
+      setError("Las contraseñas no coinciden");
       return;
     }
 
-    // Validación de email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) { 
-      setError("Please enter a valid email address.");
-      return;
-    }
-
-    // Confirmar que las contraseñas coincidan
-    if (formData.passw !== confirmPassw) {
-      setError("Passwords do not match.");
-      return;
-    }
-
-    setLoading(true);
-    setError("");
+    const data = { userName: usuario, nombre, email: correo, passw: contrasena };
+    const apiURL = `${apiUrl}/users`;
 
     try {
-      const response = await fetch(`https://imperiumsound-backend-production.up.railway.app/users`, {
+      const response = await fetch(apiURL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
       });
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || "Registration failed");
+        throw new Error(errorData.error || `Error de red: ${response.status}`);
       }
 
-      navigate("/inicio-sesion"); // Redirigir a la página de inicio de sesión
+      const json = await response.json();
+      console.log("Registro exitoso:", json);
+      navegar(inicioSesionURL);
     } catch (error) {
-      setError((error as Error).message);
-    } finally {
-      setLoading(false);
+      console.error("Error en la solicitud:", error);
+      setError("Hubo un problema con el registro. Inténtalo de nuevo.");
     }
   };
 
   return (
-    <form className="formulario" onSubmit={handleSubmit}>
-      <div className="flexp">
-        <h1 className="formulario-titulo">Registrate</h1>
-        <div className="flex">
-          <p className="formulario-texto-2 txt-f">¿Ya tienes cuenta?</p>
-          <a className="formulario-texto-2" onClick={() => navigate("/inicio-sesion")}>
-            Inicia sesión
-          </a>
+    <>
+      <form className="formulario" onSubmit={manejarSubmit}>
+        <div className="flexp">
+          <h1 className="formulario-titulo">Registrate</h1>
+          <div className="flex">
+            <p className="formulario-texto-2 txt-f">¿Ya tienes cuenta?</p>
+            <a className="formulario-texto-2" onClick={() => navegar(inicioSesionURL)}>
+              Inicia sesion
+            </a>
+          </div>
         </div>
-      </div>
-      <div id="a">
-        <p className="formulario-texto">Nombre Completo</p>
-        <input
-          className="inputRqd"
-          id="nombre"
-          type="text"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
-        />
-      </div>
-      <div id="a">
-        <p className="formulario-texto">Correo Electrónico</p>
-        <input
-          className="inputRqd"
-          id="correo"
-          type="text"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </div>
-      <div id="a">
-        <p className="formulario-texto">Usuario</p>
-        <input
-          className="inputRqd"
-          id="usuario"
-          type="text"
-          name="userName"
-          value={formData.userName}
-          onChange={handleChange}
-        />
-      </div>
-      <div id="a">
-        <p className="formulario-texto">Contraseña</p>
-        <input
-          className="inputRqd"
-          id="contrasena"
-          type="password"
-          name="passw"
-          value={formData.passw}
-          onChange={handleChange}
-        />
-      </div>
-      <div id="a">
-        <p className="formulario-texto">Confirmar Contraseña</p>
-        <input
-          className="inputRqd"
-          id="Ccontrasena"
-          type="password"
-          value={confirmPassw}
-          onChange={handleConfirmPasswChange}
-        />
-      </div>
-      {error && <p className="error-texto">{error}</p>}
-      <div id="a">
-        <button type="submit" className="boton-Registrarte" disabled={loading}>
-          {loading ? "Loading..." : "Registrarse"}
-        </button>
-      </div>
-    </form>
+
+        <div id="a">
+          <p className="formulario-texto">Nombre Completo</p>
+          <label htmlFor="nombre"></label>
+          <input
+            className="inputRqd"
+            id="nombre"
+            type="text"
+            value={nombre}
+            onChange={(e) => setNombre(e.target.value)}
+          />
+        </div>
+
+        <div id="a">
+          <p className="formulario-texto">Correo Electronico</p>
+          <label htmlFor="correo"></label>
+          <input
+            className="inputRqd"
+            id="correo"
+            type="email"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+          />
+        </div>
+
+        <div id="a">
+          <p className="formulario-texto">Usuario</p>
+          <label htmlFor="usuario"></label>
+          <input
+            className="inputRqd"
+            id="usuario"
+            type="text"
+            value={usuario}
+            onChange={(e) => setUsuario(e.target.value)}
+          />
+        </div>
+
+        <div id="a">
+          <label htmlFor="contrasena"></label>
+          <p className="formulario-texto">Contraseña</p>
+          <input
+            className="inputRqd"
+            id="contrasena"
+            type="password"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+          />
+        </div>
+
+        <div id="a">
+          <label htmlFor="Ccontrasena"></label>
+          <p className="formulario-texto">Confirmar Contraseña</p>
+          <input
+            className="inputRqd"
+            id="Ccontrasena"
+            type="password"
+            value={confirmarContrasena}
+            onChange={(e) => setConfirmarContrasena(e.target.value)}
+          />
+        </div>
+
+        <div id="a">
+          <button type="submit" className="boton-Registrarte">Registrarse</button>
+        </div>
+        {error && <p className="error-message">{error}</p>}
+      </form>
+    </>
   );
 }
