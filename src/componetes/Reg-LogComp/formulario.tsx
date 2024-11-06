@@ -1,7 +1,6 @@
 // Formulario.tsx
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import  { useState, ChangeEvent, FormEvent } from "react";
 import "../../styles/formulario.css";
-import MyGoogle from "./MyGoogle";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../config";
 
