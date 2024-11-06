@@ -1,7 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import "../../styles/formularioReg.css";
 import { useNavigate } from "react-router-dom";
-import { API } from "../../config";
 
 interface FormData {
   userName: string;
@@ -58,7 +57,7 @@ export function Registrarse() {
     setError("");
 
     try {
-      const response = await fetch(`${API}/users`, {
+      const response = await fetch(`https://imperiumsound-backend-production.up.railway.app/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
