@@ -1,33 +1,75 @@
 // Formulario.tsx
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import "../../styles/formulario.css";
 import MyGoogle from "./MyGoogle";
 import { useNavigate } from "react-router-dom";
+import { API } from "../../config";
 
-// Asegúrate de que esta ruta sea correcta
+interface FormData {
+  userName: string;
+  passw: string;
+}
 
 export function Formulario() {
-  const navegar = useNavigate();
+  const navigate = useNavigate();
   const registroURL = "/registro";
-  const [nombre, setNombre] = useState<string>("");
-  const [contrasena, setContrasena] = useState<string>("");
+  
+  const [formData, setFormData] = useState<FormData>({
+    userName: "",
+    passw: "",
+  });
+  const [error, setError] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const manejarSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Nombre:", nombre);
-    console.log("Contraseña:", contrasena);
+
+    if (formData.userName === "" || formData.passw === "") {
+      setError("Porfavor llene todos los campos.");
+      return;
+    }
+
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch(`${API}/login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Error al Iniciar Sesion");
+      }
+
+      navigate("/inicio");
+    } catch (error) {
+      setError((error as Error).message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <>
-      <form className="formulario" onSubmit={manejarSubmit}>
+      <form className="formulario" onSubmit={handleSubmit}>
         <div className="flexp">
           <h1 className="formulario-titulo">Iniciar Sesión</h1>
           <div className="flex">
             <p className="formulario-texto-2 txt-f">¿Es tu primera vez?</p>
             <a
               className="formulario-texto-2"
-              onClick={() => navegar(registroURL)}
+              onClick={() => navigate(registroURL)}
             >
               Registrate
             </a>
@@ -35,35 +77,34 @@ export function Formulario() {
         </div>
         <div>
           <p className="formulario-texto">Correo</p>
-          <label htmlFor="nombre"></label>
+          <label htmlFor="userName"></label>
           <input
             className="inputRqd"
-            id="nombre"
+            id="userName"
             type="text"
-            value={nombre}
-            onChange={(e) => setNombre(e.target.value)}
+            name="userName"
+            value={formData.userName}
+            onChange={handleChange}
           />
         </div>
         <div>
-          <label htmlFor="contrasena"></label>
+          <label htmlFor="passw"></label>
           <p className="formulario-texto">Contraseña</p>
           <input
             className="inputRqd"
-            id="contrasena"
+            id="passw"
             type="password"
-            value={contrasena}
-            onChange={(e) => setContrasena(e.target.value)}
+            name="passw"
+            value={formData.passw}
+            onChange={handleChange}
           />
-          <p className="formulario-texto-2 hover">¿Olvidaste la contraseña ?</p>
+          <p className="formulario-texto-2 hover">¿Olvidaste la contraseña?</p>
         </div>
-        <button type="submit" className="boton-Registrarte1">Iniciar Sesion</button>
-        <div className="formulario-google">
-          <p className="formulario-texto">¿O conectate con?
-            <br />
-           <br />
-          </p>
-          <MyGoogle />
-        </div>
+        <button type="submit" className="boton-Registrarte1">
+          Iniciar Sesion
+        </button>
+        {error && <p className="error-message">{error}</p>}
+        {loading && <p className="loading-message">Cargando...</p>}
       </form>
     </>
   );
