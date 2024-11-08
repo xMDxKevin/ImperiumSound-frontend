@@ -3,14 +3,29 @@ import '../../styles/panelDesplegable.css';
 import { useNavigate } from "react-router-dom";
 
 export function User() {
- 
+  const navigate = useNavigate()
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const navegar = useNavigate();
   const cuenta = "/cuenta";
-  const foro = "/foro"
+  const apiUrl = import.meta.env.VITE_API_URL ?? "https://imperiumsound-backend-production.up.railway.app";
  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const logout = () => {
+    fetch(`${apiUrl}/logout`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.message); // Opcional: ver si el backend confirma la eliminación
+      navigate("/");
+    })
+    .catch(error => console.error('Error al cerrar sesión:', error));
   };
 
   return (
@@ -25,8 +40,8 @@ export function User() {
             <ul>
             <p id='UserBienvenida'>¡Hola!</p>
               <a onClick={() => navegar(cuenta)}><li> Cuenta{" "}</li></a>
-              <a onClick={() => navegar(foro)}><li> Foro{" "}</li></a>
-              <li>Cerrar Sesion</li>
+              <a onClick={logout}><li> Cerrar Sesion{" "}</li></a>
+              
             </ul>
           </div>
         )}
