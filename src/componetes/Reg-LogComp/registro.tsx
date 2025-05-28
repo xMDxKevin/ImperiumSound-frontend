@@ -69,6 +69,7 @@ export function Registrarse() {
             className="inputRqd"
             id="nombre"
             type="text"
+            placeholder="Nombre Completo"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
           />
@@ -81,6 +82,7 @@ export function Registrarse() {
             className="imputRqd"
             id="correo"
             type="email"
+            placeholder="Correo Electronico"
             value={correo}
             onChange={(e) => setCorreo(e.target.value)}
           />
@@ -93,6 +95,7 @@ export function Registrarse() {
             className="inputRqd"
             id="usuario"
             type="text"
+            placeholder="Usuario"
             value={usuario}
             onChange={(e) => setUsuario(e.target.value)}
           />
@@ -105,6 +108,7 @@ export function Registrarse() {
             className="inputRqd"
             id="contrasena"
             type="password"
+            placeholder="Contraseña"
             value={contrasena}
             onChange={(e) => setContrasena(e.target.value)}
           />
@@ -117,6 +121,7 @@ export function Registrarse() {
             className="inputRqd"
             id="Ccontrasena"
             type="password"
+            placeholder="Confirmar Contraseña"
             value={confirmarContrasena}
             onChange={(e) => setConfirmarContrasena(e.target.value)}
           />

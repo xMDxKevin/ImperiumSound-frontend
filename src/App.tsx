@@ -14,6 +14,7 @@ import Cuenta from "./paginas/PanelUsuario";
 import MicroUP from "./paginas/MicroUP";
 import SoporteUp from "./paginas/SoporteUP";
 import Foro from "./paginas/Foro";
+import {Prueba} from "./paginas/prueba";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/microConfig" element={<MicroUP/>}></Route>
           <Route path="/soporte" element={<SoporteUp/>}></Route>
           <Route path="/foro" element={<Foro/>}></Route>
+          <Route path="/prueba" element={<Prueba/>}></Route>
         </Routes>
       </Router>
     </>

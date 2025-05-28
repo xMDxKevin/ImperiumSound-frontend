@@ -2,6 +2,7 @@ import Upsite from "../componetes/Nav-UpsiteComp/Upsite";
 import "../styles/index.css";
 import Conteo from "../componetes/Nav-UpsiteComp/Conteo";
 import { useNavigate } from "react-router-dom";
+import { Prueba } from "./prueba";
 
 
 
@@ -9,6 +10,7 @@ function Index() {
 
 const navegar = useNavigate();
 const registroURL = "/registro";
+const ensayar = "/prueba"
 
   return (
     <>
@@ -31,6 +33,9 @@ const registroURL = "/registro";
         </p>
         <a onClick={() => navegar(registroURL)}><button className="boton-registrarme">
         <div className="bolita"></div>REGISTRARME</button></a>
+        <a onClick={() => navegar(ensayar)}><button className="boton-registrarme">
+        <div className="bolita"></div>REGISTRARME</button></a>
+
       </div>
       <div className="senor" />
       </div>
