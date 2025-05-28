@@ -2,7 +2,7 @@ import Upsite from "../componetes/Nav-UpsiteComp/Upsite";
 import "../styles/index.css";
 import Conteo from "../componetes/Nav-UpsiteComp/Conteo";
 import { useNavigate } from "react-router-dom";
-import PagInicio from "./Inicio";
+
 
 
 
@@ -34,7 +34,7 @@ const PagInicio = "/inicio"
         <a onClick={() => navegar(registroURL)}><button className="boton-registrarme">
         <div className="bolita"></div>REGISTRARME</button></a>
         <a onClick={() => navegar(PagInicio)}><button className="boton-registrarme">
-        <div className="bolita"></div>REGISTRARME</button></a>
+        <div className="bolita"></div>INICIO</button></a>
 
       </div>
       <div className="senor" />
